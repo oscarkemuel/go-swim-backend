@@ -1,0 +1,33 @@
+{
+  "name": "go-swim-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Oscar K.",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src",
+    "start": "node dist/server.js",
+    "start:dev": "tsx watch src/server.ts",
+    "test": "jest --verbose",
+    "lint": "eslint . --ext .ts,.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "uuid": "^11.1.0",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^9.33.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.40.0"
+  }
+}
