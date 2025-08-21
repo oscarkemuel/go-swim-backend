@@ -3,11 +3,14 @@ import "reflect-metadata"
 import express from 'express';
 import { AppDataSource } from '@/data-source';
 import router from "@/routes";
+import { handleError } from "@middlewares/handleError";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use('/api', router);
+app.use(handleError)
 
 AppDataSource.initialize()
   .then(() => {
@@ -21,4 +24,3 @@ AppDataSource.initialize()
     console.error('Error during Data Source initialization:', err);
   });
 
-app.use('/api', router);

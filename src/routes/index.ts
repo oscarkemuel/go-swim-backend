@@ -3,6 +3,6 @@ import workoutRouter from "@routes/workout.routes";
 
 const router = Router();
 
-router.use("/workout", workoutRouter);
+router.use("/workouts", workoutRouter);
 
 export default router;

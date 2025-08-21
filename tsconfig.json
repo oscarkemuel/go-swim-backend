@@ -15,7 +15,10 @@
       "@entities/*": ["entities/*"],
       "@services/*": ["services/*"],
       "@utils/*": ["utils/*"],
-      "@routes/*": ["routes/*"]
+      "@routes/*": ["routes/*"],
+      "@repositories/*": ["repositories/*"],
+      "@schemas/*": ["schemas/*"],
+      "@middlewares/*": ["middlewares/*"],
     }
   }
 }
