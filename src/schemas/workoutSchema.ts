@@ -5,9 +5,8 @@ export const workoutSchema = z.object({
     message: "Invalid date format",
   }),
   meters: z.number().positive("Meters must be greater than 0"),
-  fatigueLevel: z.number().min(1).max(5),
-  startTime: z.string().optional(),
-  endTime: z.string().optional(),
+  timeInSeconds: z.number().min(0),
+  fatigueLevel: z.number().min(1).max(5).optional(),
   style: z.string().optional(),
 })
 

@@ -11,14 +11,11 @@ export class Workout {
   @Column({ type: "int" })
   meters!: number
 
+  @Column({ type: "int", nullable: true })
+  fatigueLevel?: number // 1 to 5
+
   @Column({ type: "int" })
-  fatigueLevel!: number // 1 a 5
-
-  @Column({ type: "time", nullable: true })
-  startTime?: string
-
-  @Column({ type: "time", nullable: true })
-  endTime?: string
+  timeInSeconds!: number
 
   @Column({ type: "varchar", nullable: true })
   style?: string

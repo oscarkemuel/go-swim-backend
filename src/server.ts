@@ -4,13 +4,17 @@ import express from 'express';
 import { AppDataSource } from '@/data-source';
 import router from "@/routes";
 import { handleError } from "@middlewares/handleError";
+import cors from 'cors';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(cors({
+  origin: '*',
+}));
 app.use('/api', router);
-app.use(handleError)
+app.use(handleError);
 
 AppDataSource.initialize()
   .then(() => {
